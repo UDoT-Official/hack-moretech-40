@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
+const urlencodedParser = express.urlencoded({extended: true});
 var app = express();
 
 app.use('/public/static', express.static('static'));
@@ -23,11 +24,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use(urlencodedParser)
+
 
 /* GET home page. */
-app.get('/', function(req, res, next) {
+app.get('/', urlencodedParser, function(req, res) {
+  console.log("Im get")
   res.sendFile(`${__dirname}/public/static/index.html`)
 });
+
+/* GET home page. */
+app.post('/', urlencodedParser, function(req, res) {
+  console.log("Im get im post")
+  res.send(`test`)
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
