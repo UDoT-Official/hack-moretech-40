@@ -1,7 +1,39 @@
+html {
+  height: 100%;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*align-content: center;*/
+  justify-content: center;
+  min-height: 100%;
+}
+
+.panel_auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.panel_auth_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.panel_auth_form_loginThings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+  margin-bottom: 5%;
+  min-height: 25px;
 }
 
 a {
