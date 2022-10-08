@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express.Router();
-
 /*
   This 
 */
@@ -11,8 +10,9 @@ app.get('/market', function(req, res, next) {
 });
 
 app.get('/lk', function(req, res, next){
-  res.send("THIS IS LK")
+  res.send("THIS IS LK");
 })
+
 
 app.get('/register', function(req, res, next) {
   //res.render('sindex', '/static/register.html')
