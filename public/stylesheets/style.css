@@ -1,9 +1,10 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+.avatar {
+  width: 256px;
+  height: 256px;
+  border-radius: 100%;
 }
 
-a {
-  color: #00B7FF;
+.ach {
+  width: 128px;
+  height: 128px;
 }
