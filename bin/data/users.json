@@ -1,0 +1,30 @@
+
+{
+    "users": {
+        "testUser" :{
+            "id": 0,
+            "password" : "",
+            "first_name": "",
+            "second_name": "",
+            "fathers_name": "",
+            "avatar_link": "",          
+            "achievements_list_id": "", 
+            "role": "",             
+            "wallet_id": "",        
+            "is_online": ""  
+        },
+
+        "admin@vtb.ru" :{
+            "id": 1,
+            "password" : "root",
+            "first_name": "root",
+            "second_name": "",
+            "fathers_name": "",
+            "avatar_link": "",          
+            "achievements_list_id": "", 
+            "role": "admin",             
+            "wallet_id": "latter",        
+            "is_online": "0"  
+        }     
+    }
+}
