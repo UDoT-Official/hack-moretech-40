@@ -10,82 +10,124 @@
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <div class="container-fluid">Шапка</div>
-    <!-- Блок личных данных -->
-    <div class="row">
-        <div class="col">
-            <div class="container-sm col">
-                <img class="avatar row" src="../images/avatar1.jpg" alt="Аватар">
-                <button class="btn btn-secondary row">Сменить аватар</button>
+    
+    <!-- Модальное окно -->
+    <div class="modal" id="balanceModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Перевод средств</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form action="http://udo.ru/transaction" method="post"></form>
+            <div class="modal-body">
+                <input type="text" name="form_user_privateKey" placeholder="Ваш private-key">
+                <input type="text" name="form_recip_publicKey" placeholder="Public-key кошелька получателя">
+                <input type="number" placeholder="Сумма перевода">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              <button type="submit" class="btn btn-primary">Перевести</button>
+            </form>
+            </div>
+          </div>
         </div>
-        <div class="col">
-            <div class="row">
-                <h1>Иванов Иван Иванович</h1>
-                <p><i>Полоска опыта</i></p>
+      </div>
+      
+
+    <div class="container-fluid">
+
+        <!-- Шапка -->
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Профиль</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Мессенджер</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Банк</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1">Афиша</a>
+            </li>
+          </ul>
+
+        <!-- Блок личных данных -->
+        <div class="row">
+            <div class="col-md-3 d-md-flex flex-md-column">
+                <!-- <div class="row"> -->
+                    <img class="avatar mx-auto" src="../images/avatar1.jpg" alt="Аватар">
+                    <button class="btn btn-secondary">Сменить аватар</button>                                                               
+                <!-- </div> -->
             </div>
-            <div class="row">
-                <div class="col">
-                    <h2>Обо мне</h2>
-                    <p>Должность: Младший специалист поддержки</p>
-                    <p>Отдел: Поддержка бизнеса</p>
-                    <p>Тимлид: Екатеринова Екатерина Екатериновна</p>
-                    <p>Ключевые интересы: спорт, видеоигры</p>
-                </div>
-                <div class="col">
-                    <h2>Личные данные</h2>
-                    <p>Номер паспорта: ХХХХ-ХХХХХХ </p>
-                    <p>ИНН: ХХХХХХХХХХХХХХХХ</p>
-                </div>
-            </div>
-            <div class="row">
-                <h2>Соцсети</h2>
-                <p>Telegram: @KateeAnd</p>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <!-- Кошелёк -->
-        <div class="col">
-            <div class="row">
-                <h2>Кошелёк</h2>
-            </div>
-            <div class="row">
+            <div class="col">
                 <div class="row">
-                    <p class="col">Монеты</p>
-                    <p class="col">ХХХ</p>
+                    <h1>Иванов Иван Иванович</h1>
+                    <p style="display: none"><i>Полоска опыта</i></p>
                 </div>
                 <div class="row">
-                    <p class="col">NFT-сертификаты</p>
-                    <p class="col">ХХ</p>
+                    <div class="col">
+                        <h2>Обо мне</h2>
+                        <p>Должность: Младший специалист поддержки</p>
+                        <p>Отдел: Поддержка бизнеса</p>
+                        <p>Тимлид: Екатеринова Екатерина Екатериновна</p>
+                        <p>Ключевые интересы: спорт, видеоигры</p>
+                    </div>
+                    <div class="col">
+                        <h2>Личные данные</h2>
+                        <p>Номер паспорта: ХХХХ-ХХХХХХ </p>
+                        <p>ИНН: ХХХХХХХХХХХХХХХХ</p>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="row">
-                        <button class="col btn btn-primary">Перевести валюту</button>
-                        <button class="col btn btn-secondary">Перейти в банк</button>
+                    <h2>Соцсети</h2>
+                    <p>Telegram: @KateeAnd</p>
+                </div>
+                <div class="row">
+                    <!-- Кошелёк -->
+                    <div class="col">
+                        <div class="row">
+                            <h2>Кошелёк</h2>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <p class="col">Монеты</p>
+                                <p class="col">ХХХ</p>
+                            </div>
+                            <div class="row">
+                                <p class="col">NFT-сертификаты</p>
+                                <p class="col">ХХ</p>
+                            </div>
+                            <div class="row">
+                                <div class="row">
+                                    <button class="col btn btn-primary" data-bs-toggle="modal" data-bs-target="#balanceModal">Перевести валюту</button>
+                                    <button class="col btn btn-secondary disabled">Перейти в банк</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- Достижения -->
+                        <div class="row">
+                            <h2>Достижения</h2>
+                            <div class="row">
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                                <div class="col"><img src="" alt="Достижение"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <!-- Достижения -->
-            <div class="row">
-                <h2>Достижения</h2>
-                <div class="row">
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                </div>
-                <div class="row">
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                    <div class="col"><img src="" alt="Достижение"></div>
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="container-fluid">Подвал</div>
 </body>
 </html>
