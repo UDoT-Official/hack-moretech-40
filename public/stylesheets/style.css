@@ -36,10 +36,20 @@
   width: 256px;
   height: 256px;
   border-radius: 100%;
-  object-fit: cover
+  object-fit: cover;
+}
+
+.goods-img {
+  width: 9rem;
+  height: 18rem;
+  object-fit: scale-down;
 }
 
 .ach {
   width: 128px;
   height: 128px;
+}
+
+div.col > div.card {
+  min-height: 30rem;
 }
