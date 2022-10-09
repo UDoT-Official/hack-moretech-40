@@ -19,7 +19,7 @@
               <h5 class="modal-title">Перевод средств</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="/transaction.html" method="post">
+            <form method="post">
             <div class="modal-body">
                 <input type="text" name="form_user_privateKey" placeholder="Ваш private-key">
                 <input type="text" name="form_recip_publicKey" placeholder="Public-key кошелька получателя">
@@ -38,30 +38,27 @@
     <div class="container-fluid">
 
         <!-- Шапка -->
-        <ul class="nav justify-content-center">
+        <ul class="nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Профиль</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Мессенджер</a>
+              <a class="nav-link" href="#">Мессенджер</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Банк</a>
+              <a class="nav-link" href="#">Банк</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Афиша</a>
+              <a class="nav-link disabled" href="#" tabindex="-1">Афиша</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Магазин</a>
-            </li>
-        </ul>
+          </ul>
 
         <!-- Блок личных данных -->
         <div class="row">
-            <div class="col-md-3 d-md-flex flex-md-column align-items-center">
+            <div class="col-md-3 d-md-flex flex-md-column">
                 <!-- <div class="row"> -->
-                    <img class="avatar mx-auto" src="../images/avatar2.jpg" alt="Аватар">
-                    <button class="btn btn-secondary" style="width: 50%;">Сменить аватар</button>                                                               
+                    <img class="avatar mx-auto" src="../images/avatar1.jpg" alt="Аватар">
+                    <button class="btn btn-secondary">Сменить аватар</button>                                                               
                 <!-- </div> -->
             </div>
             <div class="col">
@@ -106,6 +103,9 @@
                                 <div class="row">
                                     <button class="col btn btn-primary" data-bs-toggle="modal" data-bs-target="#balanceModal">Перевести валюту</button>
                                     <button class="col btn btn-secondary disabled">Перейти в банк</button>
+                                    <form action='/static/profile.html/transaction/balance' method="post">
+                                        <button class="col btn btn-primary"type="submit" name="btn btn-balance" placeholder=""">Баланс</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>

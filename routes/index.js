@@ -52,8 +52,8 @@ app.get('/static/profile.html/transaction/balance', urlencodedParser, function(r
   console.log(req.cookies)
   console.log(data)
   console.log(apiUrl+`/v1/wallets/${data['users'][req.cookies['access_token']['login']]['wallet']['public_key']}/balance`)
+  
   var a = JSON
-
       request(
       apiUrl+`/v1/wallets/${data['users'][req.cookies['access_token']['login']]['wallet']['public_key']}/balance`,
       (err, response, body) => {
@@ -65,7 +65,9 @@ app.get('/static/profile.html/transaction/balance', urlencodedParser, function(r
   
 
   console.log(a);
-  res.json(a);
+  res
+    .cookie('balance', a)
+    .redirect('/static/profile.html')
 })
 
 app.get('/static/profile.html/transaction/newWallet', urlencodedParser, function(req, res){
