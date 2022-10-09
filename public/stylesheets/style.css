@@ -1,3 +1,37 @@
+/* Colors
+1. #2469D8
+2. #2096F3
+3. #D7415E
+4. #FFDA5F
+*/
+
+.m-b-5 {
+  margin-bottom: 5%;
+}
+
+.m-b-3 {
+  margin-bottom: 3%;
+}
+
+.m-b-1 {
+  margin-bottom: 1%;
+}
+
+.m-b-10 {
+  margin-bottom: 10%;
+}
+
+.login_bg {
+  background: rgb(36,105,216);
+  background: linear-gradient(137deg, rgba(36,105,216,1) 0%, rgba(32,150,243,1) 22%, rgba(215,65,94,1) 82%, rgba(255,218,95,1) 100%); 
+  background-attachment: fixed;
+}
+
+.panel {
+  background: #fbfbfb;
+  border-radius: 15px 15px;
+}
+
 .avatar {
   width: 256px;
   height: 256px;
