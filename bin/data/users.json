@@ -1,9 +1,9 @@
 
 {
     "users": {
-        "testUser" :{
+        "1" :{
             "id": 0,
-            "password" : "",
+            "password" : "1",
             "first_name": "",
             "second_name": "",
             "fathers_name": "",
@@ -11,7 +11,11 @@
             "achievements_list_id": "", 
             "role": "",             
             "wallet_id": "",        
-            "is_online": ""  
+            "is_online": "",
+            "wallet" : {
+                "public_key" : 0,
+                "private_key" : 0
+            }
         },
 
         "admin@vtb.ru" :{
@@ -22,9 +26,28 @@
             "fathers_name": "",
             "avatar_link": "",          
             "achievements_list_id": "", 
+            "role": "admin",    
+            "is_online": "0",         
+            "wallet" : {
+                "public_key" : 0,
+                "private_key" : 0
+            }  
+        },
+
+        "user" :{
+            "id": 2,
+            "password" : "root",
+            "first_name": "Olya",
+            "second_name": "",
+            "fathers_name": "",
+            "avatar_link": "",          
+            "achievements_list_id": "", 
             "role": "admin",             
-            "wallet_id": "latter",        
-            "is_online": "0"  
-        }     
+            "is_online": "0",         
+            "wallet" : {
+                "public_key" : "0x530a6c6e8fafBaD9bcaFB15C41617b048c626871",
+                "private_key" : 0
+            }   
+        }  
     }
 }
