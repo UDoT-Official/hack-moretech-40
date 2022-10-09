@@ -19,15 +19,15 @@
               <h5 class="modal-title">Перевод средств</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="http://udo.ru/transaction" method="post"></form>
+            <form action="/transaction.html" method="post">
             <div class="modal-body">
                 <input type="text" name="form_user_privateKey" placeholder="Ваш private-key">
                 <input type="text" name="form_recip_publicKey" placeholder="Public-key кошелька получателя">
-                <input type="number" placeholder="Сумма перевода">
+                <input type="number" placeholder="Сумма перевода" name="form_amount_transaction">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-              <button type="submit" class="btn btn-primary">Перевести</button>
+              <button type="submit" fclass="btn btn-primary">Перевести</button>
             </form>
             </div>
           </div>

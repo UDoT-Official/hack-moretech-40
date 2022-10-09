@@ -11,6 +11,7 @@ const { dirname } = require('path');
 const urlencodedParser = express.urlencoded({extended: true});
 app.use('/public/static', express.static('static'));
 
+
 var data = require('../bin/data/users.json')
 
 /* POST home page. */
@@ -32,11 +33,11 @@ app.post('/', urlencodedParser, function(req, res) {
   }
 });
 
-app.post('/static/profile.html/transaction', urlencodedParser, function(req, res){
+app.post('/static/profile.html', urlencodedParser, function(req, res){
   console.log(req.cookies);
 
   var idFromClient = req.cookies['access_token']['id']
-  console.log(idFromClient)
+  console.log("I CAN SAND TOKE")
 
   res
       .send("Yea boy");
